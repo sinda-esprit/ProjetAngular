@@ -1,0 +1,26 @@
+<P>hellooooooooooo</P>
+{{title}}
+<table>
+    <tr>
+<th>id</th>
+<th>title</th>
+<th>quantite</th>
+<th>price</th>
+<th>like</th>
+    </tr>
+
+    <tr *ngFor="let p of productList">
+        <th>{{p.id}}</th>
+
+        <th>{{p.title}}</th>
+        <th>{{p.quantity}}</th>
+        <th>{{p.price}}</th>
+        <th>{{p.like}}</th>
+        <th>
+            <button (click)="buy(p.id)" [disabled]="p.quantity == 0">buy</button>
+            <button (click)="likee(p.id)">like</button>
+        </th>
+        <th [hidden]="p.like < 10">beeeeeeeeeeeeeeeeeeeeeeest</th>
+    </tr>
+
+</table>

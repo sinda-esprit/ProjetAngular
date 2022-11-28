@@ -1,1 +1,22 @@
-<p>offres-emploi works!</p>
+<table>
+    <tr>
+    <th>Reference</th>
+    <th>Titre</th>
+    <th>Entreprise</th>
+    <th>Etat</th>
+  </tr>
+  
+  <tr *ngFor = "let e of listemploi">
+    <td>{{e.reference}}</td>
+    <td>{{e.titre}}</td>
+    <td>{{e.entreprise}}</td>
+    <td>{{e.etat}}</td>
+    <td>
+      <button [disabled]="e.etat == false">Postuler</button>
+    </td>
+  </tr>
+  </table>
+  <button (click)="bilan()">Bilan</button>
+  {{nb}}
+  <input name="heelo" [(ngModel)]="textsearch" >
+  <button (click)="search()">search</button>

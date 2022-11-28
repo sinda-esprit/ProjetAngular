@@ -19,6 +19,7 @@
         <th>
             <button (click)="buy(p.id)" [disabled]="p.quantity == 0">buy</button>
             <button (click)="likee(p.id)">like</button>
+            <button [routerLink]="['/product', p.id]">dd</button>
         </th>
         <th [hidden]="p.like < 10">beeeeeeeeeeeeeeeeeeeeeeest</th>
     </tr>
